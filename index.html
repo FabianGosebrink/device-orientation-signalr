@@ -1,112 +1,34 @@
-<!-- <!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="description" content="" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
   </head>
-
   <body>
-    <canvas id="canvas" style="background:rgba(34,45,23,0.4)"></canvas>
-  </body>
+    <table class="table table-striped table-bordered">
+      <tr>
+        <td>Tilt Left/Right [gamma]</td>
+        <td id="doTiltLR"></td>
+      </tr>
+      <tr>
+        <td>Tilt Front/Back [beta]</td>
+        <td id="doTiltFB"></td>
+      </tr>
+      <tr>
+        <td>Direction [alpha]</td>
+        <td id="doDirection"></td>
+      </tr>
+    </table>
 
-  <script>
-    // window.addEventListener('devicemotion', function(event) {
-    //   console.log(event.acceleration.x + ' m/s2');
-    // });
+    <div class="container" id="logoContainer">
+      <img
+        src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png"
+        id="imgLogo"
+      />
+    </div>
 
-    function handleOrientation(event) {
-      var absolute = event.absolute;
-      var alpha = event.alpha;
-      var beta = event.beta;
-      var gamma = event.gamma;
-
-      // Do stuff with the new orientation data
-      console.log(absolute, alpha, beta, gamma);
-      drawRect(alpha, beta, 20, 20); //Drawing rectangle on initial load
-    }
-
-    var stage = document.getElementById('canvas'), // Get the canvas element by Id
-      ctx = stage.getContext('2d'), // Canvas 2d rendering context
-      x = 10, //intial horizontal position of drawn rectangle
-      y = 10, //intial vertical position of drawn rectangle
-      wid = 20, //width of the drawn rectangle
-      hei = 20; //height of the drawn rectangle
-
-    //Draw Rectangle function
-    function drawRect(x, y, wid, hei) {
-      ctx.fillStyle = '#666'; // Fill color of rectangle drawn
-      ctx.fillRect(x, y, wid, hei); //This will draw a rectangle of 20x20
-    }
-
-    drawRect(x, y, wid, hei); //Drawing rectangle on initial load
-
-    window.addEventListener('deviceorientation', handleOrientation, true);
-  </script>
-</html> -->
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      canvas {
-        border: 1px solid #d3d3d3;
-        background-color: #f1f1f1;
-      }
-    </style>
-  </head>
-
-  <body onload="startGame()">
-    <script>
-      var myGamePiece;
-
-      function startGame() {
-        myGamePiece = new component(30, 30, 'red', 10, 120);
-        myGameArea.start();
-        myGamePiece.update();
-      }
-
-      var myGameArea = {
-        canvas: document.createElement('canvas'),
-        start: function() {
-          this.canvas.width = 480;
-          this.canvas.height = 270;
-          this.context = this.canvas.getContext('2d');
-          document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        },
-        clear: function() {
-          this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        },
-      };
-
-      function component(width, height, color, x, y) {
-        this.width = width;
-        this.height = height;
-        this.x = x;
-        this.y = y;
-        this.update = function(y) {
-          ctx = myGameArea.context;
-          ctx.fillStyle = color;
-          ctx.fillRect(this.x, y || this.y, this.width, this.height);
-        };
-      }
-
-      function handleOrientation(event) {
-        var absolute = event.absolute;
-        var alpha = event.alpha;
-        var beta = event.beta;
-        var gamma = event.gamma;
-
-        // Do stuff with the new orientation data
-        console.log(beta);
-        myGameArea.clear();
-        myGamePiece.update(Math.abs(beta));
-      }
-
-      window.addEventListener('deviceorientation', handleOrientation, true);
-    </script>
-    <p>The red square is actually being drawn 50 times per second.</p>
+    <script src="motion.js"></script>
   </body>
 </html>
