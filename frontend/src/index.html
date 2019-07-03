@@ -5,28 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+
+    <style>
+      img {
+        max-width: 100%;
+        height: auto;
+        max-height: 300px;
+        display: table;
+        margin: 0 auto;
+      }
+    </style>
   </head>
   <body>
     <table class="table table-striped table-bordered">
       <tr>
-        <td>Tilt Left/Right [gamma]</td>
+        <td>Gamma</td>
         <td id="doTiltLR"></td>
       </tr>
       <tr>
-        <td>Tilt Front/Back [beta]</td>
+        <td>beta</td>
         <td id="doTiltFB"></td>
       </tr>
       <tr>
-        <td>Direction [alpha]</td>
+        <td>alpha</td>
         <td id="doDirection"></td>
       </tr>
     </table>
 
     <div class="container" id="logoContainer">
-      <img
-        src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png"
-        id="imgLogo"
-      />
+      <img src="https://picsum.photos/200" id="imgLogo" />
     </div>
 
     <script src="signalr.js"></script>
