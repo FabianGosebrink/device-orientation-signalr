@@ -12,6 +12,8 @@ let connection = new signalR.HubConnectionBuilder()
 
 connection.on('motionUpdated', data => {
   console.log(data);
+
+  turnLogo(data.beta, data.gamma);
 });
 
 connection.start().then(function() {
@@ -30,7 +32,9 @@ function deviceOrientationHandler(eventData) {
   document.getElementById('doTiltLR').innerHTML = Math.round(gamma);
   document.getElementById('doTiltFB').innerHTML = Math.round(beta);
   document.getElementById('doDirection').innerHTML = Math.round(alpha);
+}
 
+function turnLogo(beta, gamma) {
   var logo = document.getElementById('imgLogo');
   logo.style.webkitTransform =
     'rotate(' + gamma + 'deg) rotate3d(1,0,0, ' + beta * -1 + 'deg)';
