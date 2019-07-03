@@ -6,7 +6,7 @@ if ('DeviceOrientationEvent' in window) {
 }
 
 let connection = new signalR.HubConnectionBuilder()
-  .withUrl('https://localhost:5001/motion')
+  .withUrl('https://motiondevice.azurewebsites.net/motion')
   .configureLogging(signalR.LogLevel.Information)
   .build();
 
