@@ -4,12 +4,13 @@
   "description": "",
   "main": "motion.js",
   "scripts": {
-    "start": "live-server --open=./src",
+    "start": "lite-server --baseDir=./src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "live-server": "^1.2.1"
+    "@aspnet/signalr": "^1.1.4",
+    "lite-server": "^2.5.3"
   }
 }

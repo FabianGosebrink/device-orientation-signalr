@@ -5,19 +5,36 @@ if ('DeviceOrientationEvent' in window) {
     'Device Orientation API not supported.';
 }
 
-function deviceOrientationHandler(eventData) {
-  var tiltLR = eventData.gamma;
-  var tiltFB = eventData.beta;
-  var dir = eventData.alpha;
+let connection = new signalR.HubConnectionBuilder()
+  .withUrl('https://localhost:5001/motion')
+  .configureLogging(signalR.LogLevel.Information)
+  .build();
 
-  document.getElementById('doTiltLR').innerHTML = Math.round(tiltLR);
-  document.getElementById('doTiltFB').innerHTML = Math.round(tiltFB);
-  document.getElementById('doDirection').innerHTML = Math.round(dir);
+connection.on('motionUpdated', data => {
+  console.log(data);
+});
+
+connection.start().then(function() {
+  console.log('connected');
+});
+
+function deviceOrientationHandler(eventData) {
+  var gamma = eventData.gamma;
+  var beta = eventData.beta;
+  var alpha = eventData.alpha;
+
+  connection
+    .invoke('MySuperDuperAction', { alpha, beta, gamma })
+    .catch(err => console.error(err.toString()));
+
+  document.getElementById('doTiltLR').innerHTML = Math.round(gamma);
+  document.getElementById('doTiltFB').innerHTML = Math.round(beta);
+  document.getElementById('doDirection').innerHTML = Math.round(alpha);
 
   var logo = document.getElementById('imgLogo');
   logo.style.webkitTransform =
-    'rotate(' + tiltLR + 'deg) rotate3d(1,0,0, ' + tiltFB * -1 + 'deg)';
-  logo.style.MozTransform = 'rotate(' + tiltLR + 'deg)';
+    'rotate(' + gamma + 'deg) rotate3d(1,0,0, ' + beta * -1 + 'deg)';
+  logo.style.MozTransform = 'rotate(' + gamma + 'deg)';
   logo.style.transform =
-    'rotate(' + tiltLR + 'deg) rotate3d(1,0,0, ' + tiltFB * -1 + 'deg)';
+    'rotate(' + gamma + 'deg) rotate3d(1,0,0, ' + beta * -1 + 'deg)';
 }
