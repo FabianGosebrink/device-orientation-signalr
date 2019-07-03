@@ -47,8 +47,8 @@ namespace backend
             app.UseCors("CorsPolicy");
             app.UseHttpsRedirection();
 
-            app.UseStaticFiles();
             app.UseDefaultFiles();
+            app.UseStaticFiles();
 
             app.UseSignalR(routes =>
             {
