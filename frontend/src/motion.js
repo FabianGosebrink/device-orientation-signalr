@@ -5,9 +5,11 @@ function deviceOrientationHandler(eventData) {
   var beta = eventData.beta;
   var alpha = eventData.alpha;
 
-  signalRConnection
-    .invoke('MySuperDuperAction', { alpha, beta, gamma })
-    .catch(err => console.error(err.toString()));
+  if (signalRConnection.state === 1) {
+    signalRConnection
+      .invoke('MySuperDuperAction', { alpha, beta, gamma })
+      .catch(err => console.error(err.toString()));
+  }
 
   document.getElementById('doTiltLR').innerHTML = Math.round(gamma);
   document.getElementById('doTiltFB').innerHTML = Math.round(beta);
@@ -36,6 +38,7 @@ function establishSignalR() {
 
   signalRConnection.start().then(function() {
     console.log('connected');
+    console.log(signalRConnection.state);
   });
 }
 

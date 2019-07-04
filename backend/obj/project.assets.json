@@ -8337,7 +8337,7 @@
       ]
     },
     "System.Diagnostics.FileVersionInfo/4.3.0": {
-      "sha512": "XZgGihsELSwZzbmu9lkt2SeWj7ch+TdrGEbMqE045P28H0c5ihCvCPh641EkYeYs1tg9+eEP9zA0WfT+CDc+QA==",
+      "sha512": "omCF64wzQ3Q2CeIqkD6lmmxeMZtGHUmzgFMPjfVaOsyqpR66p/JaZzManMw1s33osoAb5gqpncsjie67+yUPHQ==",
       "type": "package",
       "path": "system.diagnostics.fileversioninfo/4.3.0",
       "files": [
@@ -11724,7 +11724,7 @@
       ]
     },
     "System.ValueTuple/4.3.0": {
-      "sha512": "VsQCr+Y/A/pv3Ib7rX/25qU6FO35I4hU779wr+rF9WTrapPxlXrMfSdytImxs3WhJ/tTJ7su1ECR61Ewg+PrHw==",
+      "sha512": "cNLEvBX3d6MMQRZe3SMFNukVbitDAEpVZO17qa0/2FHxZ7Y7PpFRpr6m2615XYM/tYYYf0B+WyHNujqIw8Luwg==",
       "type": "package",
       "path": "system.valuetuple/4.3.0",
       "files": [
@@ -11988,7 +11988,7 @@
       ]
     },
     "System.Xml.XPath/4.3.0": {
-      "sha512": "uz2B5ipOp0GkecyGoSTa69+vI9WjdiJMHnqEO4FNOLQ6PXH2IZHSKqC6uFoPPAtKRubaEv0aEb8TXw4l7wL/Mw==",
+      "sha512": "v1JQ5SETnQusqmS3RwStF7vwQ3L02imIzl++sewmt23VGygix04pEH+FCj1yWb+z4GDzKiljr1W7Wfvrx0YwgA==",
       "type": "package",
       "path": "system.xml.xpath/4.3.0",
       "files": [
@@ -12026,7 +12026,7 @@
       ]
     },
     "System.Xml.XPath.XDocument/4.3.0": {
-      "sha512": "ncMYV/v4ej/GhiKV2TiNf1OFg9HB6Opck3NiakYd3WYjJerf05TEweqcogjHzzxiL6S1wWdPpbaQjGfGeaHJvw==",
+      "sha512": "jw9oHHEIVW53mHY9PgrQa98Xo2IZ0ZjrpdOTmtvk+Rvg4tq7dydmxdNqUvJ5YwjDqhn75mBXWttWjiKhWP53LQ==",
       "type": "package",
       "path": "system.xml.xpath.xdocument/4.3.0",
       "files": [
@@ -12077,11 +12077,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fabian\\Desktop\\New folder\\motion-device\\backend\\backend.csproj",
+      "projectUniqueName": "C:\\_git\\FabianGosebrink\\device-orientation-signalr\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "C:\\Users\\Fabian\\Desktop\\New folder\\motion-device\\backend\\backend.csproj",
+      "projectPath": "C:\\_git\\FabianGosebrink\\device-orientation-signalr\\backend\\backend.csproj",
       "packagesPath": "C:\\Users\\Fabian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fabian\\Desktop\\New folder\\motion-device\\backend\\obj\\",
+      "outputPath": "C:\\_git\\FabianGosebrink\\device-orientation-signalr\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12095,13 +12095,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore-tooling/index.json": {},
-        "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore/index.json": {},
-        "https://dotnetfeed.blob.core.windows.net/aspnet-entityframeworkcore/index.json": {},
-        "https://dotnetfeed.blob.core.windows.net/aspnet-extensions/index.json": {},
-        "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
-        "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {

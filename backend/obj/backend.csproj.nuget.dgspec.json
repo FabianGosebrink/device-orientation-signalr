@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Fabian\\Desktop\\New folder\\motion-device\\backend\\backend.csproj": {}
+    "C:\\_git\\FabianGosebrink\\device-orientation-signalr\\backend\\backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Fabian\\Desktop\\New folder\\motion-device\\backend\\backend.csproj": {
+    "C:\\_git\\FabianGosebrink\\device-orientation-signalr\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fabian\\Desktop\\New folder\\motion-device\\backend\\backend.csproj",
+        "projectUniqueName": "C:\\_git\\FabianGosebrink\\device-orientation-signalr\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "C:\\Users\\Fabian\\Desktop\\New folder\\motion-device\\backend\\backend.csproj",
+        "projectPath": "C:\\_git\\FabianGosebrink\\device-orientation-signalr\\backend\\backend.csproj",
         "packagesPath": "C:\\Users\\Fabian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fabian\\Desktop\\New folder\\motion-device\\backend\\obj\\",
+        "outputPath": "C:\\_git\\FabianGosebrink\\device-orientation-signalr\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -25,13 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore-tooling/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-entityframeworkcore/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/aspnet-extensions/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
-          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.2": {
