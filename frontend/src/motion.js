@@ -1,5 +1,6 @@
 var signalRConnection = null;
 var logoId = 'imgLogo';
+var freezeMyself = false;
 
 function setTextOnElement(elementId, textToSet) {
   document.getElementById(elementId).innerHTML = textToSet;
@@ -10,7 +11,7 @@ function deviceOrientationHandler(eventData) {
   var beta = eventData.beta;
   var alpha = eventData.alpha;
 
-  if (signalRConnection.state === 1) {
+  if (signalrConnectionExists()) {
     signalRConnection
       .invoke('MySuperDuperAction', { alpha, beta, gamma })
       .catch(err => console.error(err.toString()));
@@ -38,7 +39,9 @@ function establishSignalR() {
   signalRConnection.on('motionUpdated', data => {
     console.log(data);
 
-    turnLogo(data.beta, data.gamma);
+    if (!freezeMyself) {
+      turnLogo(data.beta, data.gamma);
+    }
   });
 
   signalRConnection.start().then(function() {
@@ -60,4 +63,21 @@ if ('DeviceOrientationEvent' in window) {
 } else {
   document.getElementById('logoContainer').innerText =
     'Device Orientation API not supported.';
+}
+
+function signalrConnectionExists() {
+  return signalRConnection.state === 1;
+}
+
+function toggleFreeze() {
+  var checkBox = document.getElementById('freeze');
+  var text = document.getElementById('text');
+
+  freezeMyself = checkBox.checked;
+
+  if (checkBox.checked == true) {
+    text.style.display = 'block';
+  } else {
+    text.style.display = 'none';
+  }
 }
