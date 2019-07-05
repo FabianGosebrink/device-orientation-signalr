@@ -1,4 +1,5 @@
 var signalRConnection = null;
+var logoId = 'imgLogo';
 
 function deviceOrientationHandler(eventData) {
   var gamma = eventData.gamma;
@@ -11,13 +12,13 @@ function deviceOrientationHandler(eventData) {
       .catch(err => console.error(err.toString()));
   }
 
-  document.getElementById('doTiltLR').innerHTML = Math.round(gamma);
-  document.getElementById('doTiltFB').innerHTML = Math.round(beta);
-  document.getElementById('doDirection').innerHTML = Math.round(alpha);
+  setTextOnElement('gamma', Math.round(gamma));
+  setTextOnElement('beta', Math.round(beta));
+  setTextOnElement('alpha', Math.round(alpha));
 }
 
 function turnLogo(beta, gamma) {
-  var logo = document.getElementById('imgLogo');
+  var logo = document.getElementById(logoId);
   logo.style.webkitTransform =
     'rotate(' + gamma + 'deg) rotate3d(1,0,0, ' + beta * -1 + 'deg)';
   logo.style.MozTransform = 'rotate(' + gamma + 'deg)';
@@ -55,4 +56,8 @@ if ('DeviceOrientationEvent' in window) {
 } else {
   document.getElementById('logoContainer').innerText =
     'Device Orientation API not supported.';
+}
+
+function setTextOnElement(elementId, textToSet) {
+  document.getElementById(elementId).innerHTML = textToSet;
 }
