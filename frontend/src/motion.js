@@ -1,6 +1,10 @@
 var signalRConnection = null;
 var logoId = 'imgLogo';
 
+function setTextOnElement(elementId, textToSet) {
+  document.getElementById(elementId).innerHTML = textToSet;
+}
+
 function deviceOrientationHandler(eventData) {
   var gamma = eventData.gamma;
   var beta = eventData.beta;
@@ -56,8 +60,4 @@ if ('DeviceOrientationEvent' in window) {
 } else {
   document.getElementById('logoContainer').innerText =
     'Device Orientation API not supported.';
-}
-
-function setTextOnElement(elementId, textToSet) {
-  document.getElementById(elementId).innerHTML = textToSet;
 }
