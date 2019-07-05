@@ -1,7 +1,10 @@
 # HTML Device Orientation API & ASP.NET Core SignalR 👋
+
 [![Twitter: FabianGosebrink](https://img.shields.io/twitter/follow/FabianGosebrink.svg?style=social)](https://twitter.com/FabianGosebrink)
 
 > This demo project shows how to use plain Javascript and HTML to broadcast the mobile device orientation using the HTMLs device orientation API.
+
+![](.github/video.gif)
 
 ## Install
 
@@ -21,13 +24,13 @@ start the backend at the console with `dotnet run` and start the frontend with a
 
 👤 **Fabian Gosebrink**
 
-* Twitter: [@FabianGosebrink](https://twitter.com/FabianGosebrink)
-* Github: [@FabianGosebrink](https://github.com/FabianGosebrink)
+- Twitter: [@FabianGosebrink](https://twitter.com/FabianGosebrink)
+- Github: [@FabianGosebrink](https://github.com/FabianGosebrink)
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
 
+---
 
-***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
