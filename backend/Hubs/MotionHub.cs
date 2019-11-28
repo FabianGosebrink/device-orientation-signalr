@@ -5,6 +5,6 @@ public class MotionHub : Hub
 {
     public async Task MySuperDuperAction(MotionDto data)
     {
-        await Clients.Caller.SendAsync("motionUpdated", data);
+        await Clients.All.SendAsync("motionUpdated", data);
     }
 }
